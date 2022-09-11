@@ -16,15 +16,10 @@ public class Player : MonoBehaviour
     private float acceleration;
     private bool onGround;
 
-    void Start()
-    {
+    void Awake() {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    /*void Awake() {
-        body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
-    }*/
+    }
 
     void Update() {
         direction.x = Input.GetAxisRaw("Horizontal");
